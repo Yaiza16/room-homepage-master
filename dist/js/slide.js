@@ -36,6 +36,8 @@ export default function slideImages() {
     function changeOption() {
        buttons.forEach(button =>{
            button.addEventListener('click', e =>{
+               console.log(e.target)
+               console.log(e)
                setUpOption(e.target)
            } )
        })
