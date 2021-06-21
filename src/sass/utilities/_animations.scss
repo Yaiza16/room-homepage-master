@@ -26,6 +26,34 @@
     }
 }
 
+@mixin toggleDown {
+    @content;
+
+    @keyframes toggleDown {
+    0% {
+        transform: translateY(calc(-100% - 4rem));
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+    }
+}
+
+@mixin toggleUp {
+    @content;
+
+    @keyframes toggleUp {
+    0% {
+        transform: translateY(0);
+    }
+
+    100%{
+        transform: translateY(calc(-100% - 4rem));
+    }
+    }
+}
+
 
 @mixin opacityText {
     @content;

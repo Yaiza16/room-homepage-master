@@ -1,5 +1,6 @@
 @use '../utilities/variables' as v;
 @use '../utilities/mixins' as m;
+@use '../utilities/animations' as a;
 
 .header{
     position: absolute;
@@ -11,10 +12,11 @@
     z-index: 10;
 
     @include m.mq('large'){
-        top: 4rem;
+        top: 0;
         left: 0;
-        // padding: 0 3rem;
+        padding: 4rem 3rem;
         width: 40%;
+        height: auto;
         display: flex;
         justify-content: center;
     }
@@ -31,66 +33,75 @@
     }
 }
 
-.hamburger{
+.hamburger-container{
     display: none;
+    cursor: pointer;
+    position: absolute;
+    left: 2rem;
+    z-index: 50;
 
     @include m.mq('large'){
-    display: unset;
-    width: 2rem;
+        width: 2rem;
+        height: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.hamburger{
+    width: 100%;
     height: 3px;
     background-color: v.$dark-gray;
-    position: absolute;
-    left: 3rem;
-    bottom: 50%;
-    border-radius: .2rem;
-    z-index: 50;
+    border-radius: 1rem;
 
     &::before{
         content: "";
         position: absolute;
-        width: 2rem;
-        height: 3px;
-        top: -8px;
-        background-color: v.$dark-gray;
-        border-radius: .2rem;
-
+        top: 0;
+        @extend .hamburger;
     }
 
     &::after{
         content: "";
         position: absolute;
-        width: 2rem;
-        height: 3px;
-        top: 8px;
-        background-color: v.$dark-gray;
-        border-radius: .2rem;
-
+        bottom: 0;
+        @extend .hamburger;
     }
-    }
-
     
 }
 
 .nav{
     @include m.mq('large'){
         position: absolute;
-        transform: translateY(-10rem);
-        background-color: v.$white;
-        padding: 2rem 0 2rem 6rem;
-        left: 0;
-        width: 100%;
-    }
-
-    @include m.mq('medium'){
         width: 100%;
         height: 100%;
-        transform: translateY(-100%);
-        padding: 0;
-        padding-right: 5rem;
+        transform: translateY(calc(-100% - 4rem));
+        background-color: v.$white;
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        left: 0;
+        width: 100%;
+
+        @include a.toggleUp{
+            animation: toggleUp 1s forwards;
+        }
     }
+
+    @include m.mq('medium'){
+        transform: translateY(-100%);
+        padding: 0;
+        padding-right: 5rem;
+    }
+
+    &--opened{
+        transform: translateY(0);
+        @include a.toggleDown{
+            animation: toggleDown 1s forwards;
+        };
+    }
+    
 }
 
 .nav-list{
