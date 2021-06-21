@@ -1,0 +1,8 @@
+@use '../utilities/variables' as v;
+
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap');
+
+html{
+    font-family: v.$primary-font;
+    font-size: 12px;
+}

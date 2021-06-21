@@ -1,0 +1,24 @@
+{
+  "name": "room-homepage-master",
+  "version": "1.0.0",
+  "description": "![Design preview for the Room homepage coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch src/sass:dist/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yaiza16/room-homepage-master.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yaiza16/room-homepage-master/issues"
+  },
+  "homepage": "https://github.com/Yaiza16/room-homepage-master#readme",
+  "devDependencies": {
+    "sass": "^1.35.1"
+  }
+}

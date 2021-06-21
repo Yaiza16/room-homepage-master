@@ -1,0 +1,46 @@
+@mixin slideFromRight {
+    @content;
+
+    @keyframes slideFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100%{
+        transform: translateX(0%);
+    }
+    }
+}
+
+@mixin slideFromLeft {
+    @content;
+
+    @keyframes slideFromLeft {
+    0% {
+        transform: translate(-100%);
+    }
+
+    100%{
+        transform: translateX(0%);
+    }
+    }
+}
+
+
+@mixin opacityText {
+    @content;
+
+    @keyframes opacityText {
+    0% {
+        opacity: 100%;
+    }
+
+    50%{
+        opacity: 0%;
+    }
+
+    100%{
+        opacity: 100%;
+    }
+    }
+}

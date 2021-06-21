@@ -1,0 +1,49 @@
+@use '../utilities/variables' as v;
+
+.header{
+    position: absolute;
+    top: 5rem;
+    left: 5rem;
+    z-index: 2;
+    display: flex;
+    gap: 5rem;
+    z-index: 10;
+}
+
+.nav-list{
+    display: flex;
+    gap: 2rem;
+
+    &__item{
+        text-transform: lowercase;
+    }
+
+    &__link{
+        text-decoration: none;
+        color: v.$white;
+        position: relative;
+
+        &::before{
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            width: 0%;
+            background-color: v.$white;
+            height: 1px;
+            border-radius: 2rem;
+
+            transition: all .2s linear;
+            transform-origin: center;
+        }
+
+        &:hover{
+            text-shadow: 0 0 1px currentColor;
+
+            &::before{
+                left: 15%;
+                width: 70%;
+            }
+        }
+    }
+}
