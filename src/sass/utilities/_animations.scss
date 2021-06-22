@@ -72,3 +72,31 @@
     }
     }
 }
+
+@mixin rotateMenuOpened {
+    @content;
+
+    @keyframes rotateMenuOpened {
+    0% {
+        transform: rotate(120deg);
+    }
+
+    100%{
+        transform: rotate(240deg);
+    }
+    }
+}
+
+@mixin rotateMenuClosed {
+    @content;
+
+    @keyframes rotateMenuClosed {
+    0% {
+        transform: rotate(240deg);
+    }
+
+    100%{
+        transform: rotate(120deg);
+    }
+    }
+}

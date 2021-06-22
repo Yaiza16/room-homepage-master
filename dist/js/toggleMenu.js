@@ -4,6 +4,16 @@ export default function toggleMenu(){
 
     hamburger.addEventListener('click', () =>{
         nav.classList.toggle('nav--opened')
-        hamburger.classList.toggle('hamburger-closed')
+
+        if (hamburger.classList.contains('hamburger-container--closed')){
+            hamburger.classList.remove('hamburger-container--closed')
+            hamburger.classList.add('hamburger-container--opened')
+        }else if (hamburger.classList.contains('hamburger-container--opened')) {
+            hamburger.classList.remove('hamburger-container--opened')
+            hamburger.classList.add('hamburger-container--closed')
+        } else {
+            hamburger.classList.add('hamburger-container--closed')
+        }
+        
     })
 }

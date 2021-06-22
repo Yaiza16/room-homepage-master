@@ -36,17 +36,55 @@
 .hamburger-container{
     display: none;
     cursor: pointer;
-    position: absolute;
-    left: 2rem;
+    
     z-index: 50;
 
     @include m.mq('large'){
         width: 2rem;
         height: 1.5rem;
         display: flex;
+        position: absolute;
+        left: 2rem;
         justify-content: center;
         align-items: center;
+        transform: rotate(0deg);
+        transition: transform .5s ease-in-out;
+
+        &--closed{
+            .hamburger{
+                transform: rotate(120deg);
+                transition: transform .5s ease-in-out;
+            }
+
+            .hamburger::before{
+                display: none;
+            }
+        }
+
+        &--opened{
+            .hamburger{
+                transform: rotate(0deg);
+                transition: transform .5s ease-in-out;
+            }
+
+            .hamburger::before{
+                content: "";
+                position: absolute;
+                display: unset;
+                transform: rotate(0deg);
+                top: -8px;
+            }
+
+            .hamburger::after{
+                content: "";
+                position: absolute;
+                transform: rotate(0deg);
+                bottom: -8px;
+            }
+        }
     }
+
+
 }
 
 .hamburger{

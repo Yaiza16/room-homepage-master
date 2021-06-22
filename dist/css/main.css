@@ -32,7 +32,6 @@ html {
   display: flex;
   position: relative;
   background-color: white;
-  overflow: hidden;
 }
 @media only screen and (max-width: 960px) {
   .main {
@@ -268,8 +267,6 @@ html {
 .hamburger-container {
   display: none;
   cursor: pointer;
-  position: absolute;
-  left: 2rem;
   z-index: 50;
 }
 @media only screen and (max-width: 960px) {
@@ -277,8 +274,36 @@ html {
     width: 2rem;
     height: 1.5rem;
     display: flex;
+    position: absolute;
+    left: 2rem;
     justify-content: center;
     align-items: center;
+    transform: rotate(0deg);
+    transition: transform 0.5s ease-in-out;
+  }
+  .hamburger-container--closed .hamburger, .hamburger-container--closed .hamburger::after, .hamburger-container--closed .hamburger::before {
+    transform: rotate(120deg);
+    transition: transform 0.5s ease-in-out;
+  }
+  .hamburger-container--closed .hamburger::before {
+    display: none;
+  }
+  .hamburger-container--opened .hamburger, .hamburger-container--opened .hamburger::after, .hamburger-container--opened .hamburger::before {
+    transform: rotate(0deg);
+    transition: transform 0.5s ease-in-out;
+  }
+  .hamburger-container--opened .hamburger::before {
+    content: "";
+    position: absolute;
+    display: unset;
+    transform: rotate(0deg);
+    top: -8px;
+  }
+  .hamburger-container--opened .hamburger::after {
+    content: "";
+    position: absolute;
+    transform: rotate(0deg);
+    bottom: -8px;
   }
 }
 

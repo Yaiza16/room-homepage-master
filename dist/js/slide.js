@@ -1,4 +1,4 @@
-export default function slideImages() {
+export default function slideImages(e) {
     const buttons = document.querySelectorAll('[data-btn]');
     const bg = document.querySelectorAll('[data-bg]');
 
@@ -24,6 +24,22 @@ export default function slideImages() {
         }
     }
 
+    document.addEventListener('keydown', (e) =>{
+        //39 = right, 37 = left
+        if (e.keyCode == 39){
+            setUpIndex('right')
+            selectImage('right', indexSelected, previousIndexSelected)
+            selectText(indexSelected, previousIndexSelected)
+            setUpPreviousIndex('right')
+        }
+        if (e.keyCode == 37){
+            setUpIndex('left')
+            selectImage('left', indexSelected, previousIndexSelected)
+            selectText(indexSelected, previousIndexSelected)
+            setUpPreviousIndex('left')
+        }
+    })
+
     const lengthOptions = Object.keys(options).length;
     let index = {
         indexSelected: 0,
@@ -36,8 +52,6 @@ export default function slideImages() {
     function changeOption() {
        buttons.forEach(button =>{
            button.addEventListener('click', e =>{
-               console.log(e.target)
-               console.log(e)
                setUpOption(e.target)
            } )
        })
@@ -45,16 +59,16 @@ export default function slideImages() {
 
     function setUpOption(btn){
         // indexSelected ++;
+
+
         if (btn.dataset.btn == 'right'){
             setUpIndex('right')
-            console.log(indexSelected)
             selectImage('right', indexSelected, previousIndexSelected)
             selectText(indexSelected, previousIndexSelected)
             setUpPreviousIndex('right')
         }
         if(btn.dataset.btn == 'left'){
             setUpIndex('left')
-            console.log(indexSelected)
             selectImage('left', indexSelected, previousIndexSelected)
             selectText(indexSelected, previousIndexSelected)
             setUpPreviousIndex('left')
@@ -103,12 +117,8 @@ export default function slideImages() {
                 if (el.classList.contains('hero-bg__item--selected-left')){
                     el.classList.remove('hero-bg__item--selected-left');
                 }
-
-
-                console.log(`previous Index Selected: ${previousIndexSelected}`)
             }
             if (el.dataset.bg == indexSelected){
-                console.log(`index selected: ${indexSelected}`)
                 if (side == 'right'){
                     el.classList.add('hero-bg__item--selected-right')
                 } 
@@ -119,22 +129,6 @@ export default function slideImages() {
         })
     }
 
-
-
-    // function selectImage(indexSelected, previousIndexSelected){
-    //     bg.forEach(el =>{
-    //         if (el.dataset.bg == previousIndexSelected){
-    //             if (el.classList.contains('hero-bg__item--selected')){
-    //                 el.classList.remove('hero-bg__item--selected');
-    //             }
-    //             console.log(`previous Index Selected: ${previousIndexSelected}`)
-    //         }
-    //         if (el.dataset.bg == indexSelected){
-    //             console.log(`index selected: ${indexSelected}`)
-    //             el.classList.add('hero-bg__item--selected')
-    //         }
-    //     })
-    // }
 
     function selectText(indexSelected, previousIndexSelected){
         const intro = document.getElementById('intro')
