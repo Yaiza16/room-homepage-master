@@ -77,34 +77,34 @@ html {
   z-index: 1;
 }
 .hero-bg__item--1 {
-  background-image: url(/dist/images/desktop-image-hero-1.jpg);
+  background-image: url(/images/desktop-image-hero-1.jpg);
 }
 .hero-bg__item--2 {
-  background-image: url(/dist/images/desktop-image-hero-2.jpg);
+  background-image: url(/images/desktop-image-hero-2.jpg);
 }
 .hero-bg__item--3 {
-  background-image: url(/dist/images/desktop-image-hero-3.jpg);
+  background-image: url(/images/desktop-image-hero-3.jpg);
 }
 @media only screen and (max-width: 960px) {
   .hero-bg__item--1 {
-    background-image: url(/dist/images/mobile-image-hero-1.jpg);
+    background-image: url(/images/mobile-image-hero-1.jpg);
   }
   .hero-bg__item--2 {
-    background-image: url(/dist/images/mobile-image-hero-2.jpg);
+    background-image: url(/images/mobile-image-hero-2.jpg);
   }
   .hero-bg__item--3 {
-    background-image: url(/dist/images/mobile-image-hero-3.jpg);
+    background-image: url(/images/mobile-image-hero-3.jpg);
   }
 }
 @media only screen and (max-width: 860px) {
   .hero-bg__item--1 {
-    background-image: url(/dist/images/desktop-image-hero-1.jpg);
+    background-image: url(/images/desktop-image-hero-1.jpg);
   }
   .hero-bg__item--2 {
-    background-image: url(/dist/images/desktop-image-hero-2.jpg);
+    background-image: url(/images/desktop-image-hero-2.jpg);
   }
   .hero-bg__item--3 {
-    background-image: url(/dist/images/desktop-image-hero-3.jpg);
+    background-image: url(/images/desktop-image-hero-3.jpg);
   }
 }
 .hero-bg__item--selected-right {
@@ -422,7 +422,7 @@ html {
   }
 }
 .info__image1 {
-  background: url(/dist/images/image-about-dark.jpg);
+  background: url(/images/image-about-dark.jpg);
   width: 30%;
   height: 100%;
   background-size: cover;
@@ -435,7 +435,7 @@ html {
   }
 }
 .info__image2 {
-  background: url(/dist/images/image-about-light.jpg);
+  background: url(/images/image-about-light.jpg);
   width: 30%;
   height: 100%;
   background-size: cover;
