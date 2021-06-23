@@ -14,6 +14,5 @@ export default function toggleMenu(){
         } else {
             hamburger.classList.add('hamburger-container--closed')
         }
-        
     })
 }

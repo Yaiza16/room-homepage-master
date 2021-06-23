@@ -40,11 +40,7 @@ export default function slideImages(e) {
         }
     })
 
-    const lengthOptions = Object.keys(options).length;
-    let index = {
-        indexSelected: 0,
-        previousIndexSelected: 0
-    }
+    
     let indexSelected = 0;
     let previousIndexSelected = 0;
     changeOption()
@@ -58,9 +54,6 @@ export default function slideImages(e) {
     }
 
     function setUpOption(btn){
-        // indexSelected ++;
-
-
         if (btn.dataset.btn == 'right'){
             setUpIndex('right')
             selectImage('right', indexSelected, previousIndexSelected)
