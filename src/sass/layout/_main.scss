@@ -7,9 +7,7 @@
     height: 534px;
     display: flex;
     position: relative;
-    background-color: v.$white-background;
-    // overflow: hidden;
-    
+    background-color: v.$white-background;    
 
     @include m.mq('large'){
         height: 500px;
@@ -53,42 +51,42 @@
 
 
         &--1{
-            background-image: url(/dist/images/desktop-image-hero-1.jpg);
+            background-image: url(/images/desktop-image-hero-1.jpg);
         }
 
         &--2{
-            background-image: url(/dist/images/desktop-image-hero-2.jpg);
+            background-image: url(/images/desktop-image-hero-2.jpg);
         }
 
         &--3{
-            background-image: url(/dist/images/desktop-image-hero-3.jpg);
+            background-image: url(/images/desktop-image-hero-3.jpg);
         }
 
         @include m.mq('large'){
             &--1{
-                background-image: url(/dist/images/mobile-image-hero-1.jpg);
+                background-image: url(/images/mobile-image-hero-1.jpg);
             }
     
             &--2{
-                background-image: url(/dist/images/mobile-image-hero-2.jpg);
+                background-image: url(/images/mobile-image-hero-2.jpg);
             }
     
             &--3{
-                background-image: url(/dist/images/mobile-image-hero-3.jpg);
+                background-image: url(/images/mobile-image-hero-3.jpg);
             }
         }
 
         @include m.mq('medium'){
             &--1{
-                background-image: url(/dist/images/desktop-image-hero-1.jpg);
+                background-image: url(/images/desktop-image-hero-1.jpg);
             }
     
             &--2{
-                background-image: url(/dist/images/desktop-image-hero-2.jpg);
+                background-image: url(/images/desktop-image-hero-2.jpg);
             }
     
             &--3{
-                background-image: url(/dist/images/desktop-image-hero-3.jpg);
+                background-image: url(/images/desktop-image-hero-3.jpg);
             }
         }
 
