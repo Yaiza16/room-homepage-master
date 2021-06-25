@@ -10,6 +10,10 @@ Thanks for checking out this front-end coding challenge.
 
 **To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
 
+## Result
+- Solution URL: [Frontendmentor]()
+- Live Site URL: [Room homepage](https://room-homepage-master-yv.netlify.app/)
+
 ## The challenge
 
 Your challenge is to build out this e-commerce homepage and get it looking as close to the design as possible.

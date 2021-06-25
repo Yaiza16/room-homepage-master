@@ -90,6 +90,10 @@
             }
         }
 
+        &--selected-initial{
+            z-index: 2;
+        }
+
         &--selected-right{
             z-index: 2;
             @include a.slideFromRight{

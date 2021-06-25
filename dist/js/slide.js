@@ -110,6 +110,9 @@ export default function slideImages(e) {
                 if (el.classList.contains('hero-bg__item--selected-left')){
                     el.classList.remove('hero-bg__item--selected-left');
                 }
+                if (el.classList.contains('hero-bg__item--selected-initial')){
+                    el.classList.remove('hero-bg__item--selected-initial');
+                }
             }
             if (el.dataset.bg == indexSelected){
                 if (side == 'right'){

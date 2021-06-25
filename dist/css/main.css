@@ -107,6 +107,9 @@ html {
     background-image: url(/images/desktop-image-hero-3.jpg);
   }
 }
+.hero-bg__item--selected-initial {
+  z-index: 2;
+}
 .hero-bg__item--selected-right {
   z-index: 2;
   animation: slideFromRight 1.2s forwards;
